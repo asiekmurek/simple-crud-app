@@ -4,6 +4,7 @@ import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.event.EventListener;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import javax.sql.DataSource;
@@ -26,5 +27,16 @@ public class DbConfig {
         return new JdbcTemplate(getDataSource());
     }
 
+    @EventListener(ApplicationReadyEvent.class)
+    public Users findByUserId(){
+        String sql = "SELECT * FROM users where USER_ID = '1'";
+        return getJdbcTemplate().queryForObject(sql, new UserRowMapper());
+    }
+
+    // TODO: Remove from here, it is only for checking!
+    @EventListener(ApplicationReadyEvent.class)
+    public void get(){
+        System.out.println(findByUserId().getUserName());
+    }
 
 }

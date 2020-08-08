@@ -14,8 +14,7 @@ public class DemoApplication {
 
     @EventListener(ApplicationReadyEvent.class)
     public void get(){
-        System.out.println("Connection to database works!");
-
+        System.out.println("Reading data from database works!");
     }
 
 }
