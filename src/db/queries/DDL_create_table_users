@@ -1,0 +1,10 @@
+create table users
+(
+    USER_ID       VARCHAR(5)  NOT NULL,
+    USER_NAME     VARCHAR(32) NOT NULL,
+    USER_LST_NAME VARCHAR(32) NOT NULL,
+    AGE           INTEGER(4),
+    HAS_ANIMAL    BOOLEAN     NOT NULL,
+    ANIMAL        VARCHAR(32),
+    PRIMARY KEY  (USER_ID)
+)
