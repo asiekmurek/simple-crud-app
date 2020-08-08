@@ -1,0 +1,16 @@
+# USER_ID should be autoincrement and it will be changed in the future
+
+INSERT INTO users (USER_ID, USER_NAME, USER_LST_NAME, AGE, HAS_ANIMAL, ANIMAL)
+VALUES('1', 'John', 'Doe', 34, 0, null);
+
+INSERT INTO users (USER_ID, USER_NAME, USER_LST_NAME, AGE, HAS_ANIMAL, ANIMAL)
+VALUES('2', 'Sarah', 'Monsen', 65, 1, 'cat');
+
+INSERT INTO users (USER_ID, USER_NAME, USER_LST_NAME, AGE, HAS_ANIMAL, ANIMAL)
+VALUES('3', 'Emily', 'Sims', 11, 1, 'hamster');
+
+INSERT INTO users (USER_ID, USER_NAME, USER_LST_NAME, AGE, HAS_ANIMAL, ANIMAL)
+VALUES('4', 'Lars', 'Smith', 45, 1, 'dog');
+
+INSERT INTO users (USER_ID, USER_NAME, USER_LST_NAME, AGE, HAS_ANIMAL, ANIMAL)
+VALUES('5', 'Hannah', 'Moss', 25, 0, null);
